@@ -1,8 +1,11 @@
-import ValueSchema from "../models/Value";
+import StarSchema from "../models/Star"
+import GalaxySchema from "../models/Galaxy";
 import mongoose from "mongoose";
 
 class DbContext {
-  Values = mongoose.model("Value", ValueSchema);
+  Stars = mongoose.model("Star", StarSchema)
+  Galaxies = mongoose.model("Galaxy", GalaxySchema)
+
 }
 
 export const dbContext = new DbContext();
